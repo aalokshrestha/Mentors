@@ -1,0 +1,38 @@
+<ion-view title="Account" id="page12">
+  <ion-content padding="true" class="has-header">
+    
+    <section class="my-card">
+      <div class="list card">
+        <div class="pic-holder">
+          <input custom-on-change="uploadFile" ng-model="picFile" type="file" id="file" accept="image/*" capture="camera" style="display:none"/>
+          <div ng-show="!isImage" ng-click="opencamera()" style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
+            <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+          </div>
+          <div ng-show="isImage" style="background-color: rgb(232, 235, 239); text-align: center;">
+            <img src="{{ file }}" class="thumb" style="height: 250px;">
+          </div>
+        </div>
+        </div>
+      </div>
+      <div id="name-wrapper">
+        <h3 class="startup-name">User Company</h3>
+        <h5 class="startup-post">IOS</h5>
+        <div class="show-list-numbers-and-dots">
+          <p>Company description</p>
+        </div>
+      </div>
+    </section>
+
+    <a ui-sref="profile2()" style="border-radius:50px 50px 50px 50px;" class="button button-dark button-block button-outline">EDIT INFO</a>
+    <a ui-sref="settings()" style="border-radius:50px 50px 50px 50px;" class="button button-dark button-block button-outline">SETTINGS</a>
+
+    <!-- <div class="list card" id="account-card22">
+      <ion-item class="item-icon-left dark" id="account-list-item29" ui-sref="favourites()">
+        <i class="icon ion-ios-star"></i>View Favourites</ion-item>
+      <ion-item class="item-icon-left dark" id="account-list-item31" ui-sref="settings()">
+        <i class="icon ion-ios-settings"></i>Settings</ion-item>
+      <ion-item class="item-icon-left dark" id="account-list-item32" ui-sref="profile2()">
+        <i class="icon ion-refresh"></i>Update Profile</ion-item>
+      </div> -->
+    </ion-content>
+  </ion-view>

@@ -1,0 +1,40 @@
+<ion-view title="Start-up Registration" hide-nav-bar="true" id="page6">
+  <ion-content padding="true" class="manual-ios-statusbar-padding">
+    <h5 id="startUpRegistration-heading15" style="color:#000000;">Company Name</h5>
+    <form id="startUpRegistration-form16" class="list">
+      <label class="item item-input" id="startUpRegistration-input14">
+        <input type="text" name="name" ng-model="userdata.name" >
+      </label>
+      <p class="danger" padding>{{ $error.name }}</p>
+    </form>
+    <h5 id="startUpRegistration-heading16" style="color:#000000;">Description</h5>
+    <form id="startUpRegistration-form17" class="list">
+      <label class="item item-input"><textarea placeholder="We're a gaming company..." ng-model="userdata.description"></textarea></label>
+      <p class="danger" padding>{{ $error.description }}</p>
+    </form>
+    <h5 id="startUpRegistration-heading17" style="color:#000000;">Email</h5>
+    <form id="startUpRegistration-form18" class="list">
+      <label class="item item-input" id="startUpRegistration-input15">
+        <input type="email" name="email" ng-model="userdata.email">
+      </label>
+      <p class="danger" padding>{{ $error.email }}</p>
+    </form>
+    <h5 id="startUpRegistration-heading12" style="color:#000000;">Password</h5>
+    <form id="startUpRegistration-form11" class="list">
+      <label class="item item-input" id="startUpRegistration-input10">
+        <input type="password" name="password" ng-model="userdata.password"/>
+      </label>
+      <p class="danger" padding>{{ $error.password }}</p>
+    </form>
+    <h5 id="startUpRegistration-heading18" style="color:#000000;">Re-enter password</h5>
+    <form id="startUpRegistration-form13" class="list">
+      <label class="item item-input" id="startUpRegistration-input16">
+        <input type="password" name="re-password" ng-model="userdata.re_password" />
+      </label>
+      <p class="danger" padding>{{ $error.re_password }}</p>
+      <p class="danger" padding>{{ $error.signup }}</p>
+      <a ng-click="signup()" id="startUpRegistration-button7" style="border-radius:50px 50px 50px 50px;" class="button button-dark button-block button-outline">CONTINUE</a>
+      <a ui-sref="type()" id="startUpRegistration-button54" style="font-style:italic;" class="button button-stable button-small button-block button-clear icon ion-ios-arrow-back"> Go Back</a>
+    </form>
+  </ion-content>
+</ion-view>

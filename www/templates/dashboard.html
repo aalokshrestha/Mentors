@@ -1,0 +1,91 @@
+<ion-view title="Dashboard" hide-nav-bar="true" id="page11">
+  <ion-nav-buttons side="left" scroll="false">
+    <button class="button icon ion-android-menu"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="manual-ios-statusbar-padding" scroll="false">
+    <div class="outer" id="match-found">
+      <div class="middle">
+          <div>
+            <div class="circle left"><span class="icon ion-android-person ion-block"></span></div>
+            <div class="star"><span class="icon ion-android-person ion-ios-star"></span></div>
+            <div class="circle right"><span class="icon ion-android-person ion-block"></span></div>
+        </div>
+        <a style="border-radius:50px 50px 50px 50px;margin-top: 20px;color: #ffdc60;float: left;width: 100%;border-color: #ffdc60;" class="button button-dark button-block button-outline">SEND AN EMAIL</a>
+        <a ng-click="hideOverlay()" style="font-style:italic;" class="button button-stable button-small button-block button-clear"> Skip</a>
+      </div>
+    </div>
+    <div id="dashboard-button-bar1" class="button-bar">
+      <a ui-sref="account()" id="dashboard-button18" class="button button-light button-block button-icon icon-left ion-android-contacts"></a>
+      <button id="dashboard-button20" class="button button-light button-block button-icon button-block">
+        <img src="img/logo.png" style="height: 30px;margin-top: 10px;" alt="logo" />
+      </button>
+      <button id="dashboard-button19" class="button button-light button-block button-icon"></button>
+    </div>
+    <section id="swing-viewport">
+      <ul swing-stack id="swing" swing-options="options">
+        <li swing-card swing-on-throwoutleft="throwoutleft(eventName, eventObject)" swing-on-throwoutright="throwoutright(eventName, eventObject)">
+          <section class="my-card">
+            <div class="list card">
+              <div class="pic-holder">
+                <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+              </div>
+            </div>
+            <div id="name-wrapper">
+              <h3 class="startup-name">
+                ABC company
+                <span ng-click="info()" class="info right icon ion-ios-information"></span>
+              </h3>
+              <h5 class="startup-post">IOS</h5>
+              <div class="show-list-numbers-and-dots">
+                <p></p>
+              </div>
+            </div>
+          </section>
+        </li>
+        <li swing-card swing-on-throwoutleft="throwoutleft(eventName, eventObject)" swing-on-throwoutright="throwoutright(eventName, eventObject)">
+          <section class="my-card">
+            <div class="list card">
+              <div class="pic-holder">
+                <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+              </div>
+            </div>
+            <div id="name-wrapper">
+              <h3 class="startup-name">
+                XYZ company
+                <span ng-click="info()" class="info right icon ion-ios-information"></span>
+              </h3>
+              <h5 class="startup-post">Project manager</h5>
+              <div class="show-list-numbers-and-dots">
+                <p></p>
+              </div>
+            </div>
+          </section>
+        </li>
+        <li swing-card swing-on-throwoutleft="throwoutleft(eventName, eventObject)" swing-on-throwoutright="throwoutright(eventName, eventObject)">
+          <section class="my-card">
+            <div class="list card">
+              <div class="pic-holder">
+                <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+              </div>
+            </div>
+            <div id="name-wrapper">
+              <h3 class="startup-name">
+                Stone & Chalk
+                <span ng-click="info()" class="info right icon ion-ios-information"></span>
+              </h3>
+              <h5 class="startup-post">Startup</h5>
+              <div class="show-list-numbers-and-dots">
+                <p>Stone & Chalk is the largest fintech hub in Asia and is already the centre of gravity for fintech in Australia.</p>
+              </div>
+            </div>
+          </section>
+        </li>
+    </ul>
+    </section>
+    <div id="dashboard-button-bar2" class="button-bar">
+      <!-- <button id="dashboard-button25" class="button button-assertive button-large button-block button-clear icon ion-android-cancel"></button> -->
+      <!-- <button id="dashboard-button26" class="button button-energized button-large button-block button-clear icon ion-ios-star"></button> -->
+      <!-- <button id="dashboard-button32" class="button button-dark button-large button-block button-clear icon ion-ios-email"></button> -->
+    </div>
+  </ion-content>
+</ion-view>

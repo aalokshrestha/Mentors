@@ -328,14 +328,14 @@ function ($scope, $stateParams) {
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $ionicPopup) {
 
-	$scope.logout = function(){
-		$scope.showConfirm();
+	$scope.disable = function(){
+		$scope.showConfirm("Disable", "Are you sure you want to disable your account?");
 	}
 
-	$scope.showConfirm = function() {
+	$scope.showConfirm = function(title, msg) {
 		var confirmPopup = $ionicPopup.confirm({
-			title: 'Logout',
-			template: '<br /><span style="text-align:center;width:100%">Are you sure you want to Logout?</span><br />'
+			title: title,
+			template: '<br /><span style="text-align:center;width:100%">'+msg+'</span><br />'
 		});
 
 		confirmPopup.then(function(res) {
@@ -345,6 +345,10 @@ function ($scope, $stateParams, $ionicPopup) {
 		});
 	};
 
+	$scope.logout = function(){
+		$scope.showConfirm("Logout", "Are you sure you want to Logout?");
+	}
+
 }])
    
 .controller('settings2Ctrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
@@ -352,6 +356,26 @@ function ($scope, $stateParams, $ionicPopup) {
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
 
+	$scope.disable = function(){
+		$scope.showConfirm("Disable", "Are you sure you want to disable your account?");
+	}
+
+	$scope.showConfirm = function(title, msg) {
+		var confirmPopup = $ionicPopup.confirm({
+			title: title,
+			template: '<br /><span style="text-align:center;width:100%">'+msg+'</span><br />'
+		});
+
+		confirmPopup.then(function(res) {
+			if(res) {
+				window.location.href = "#/";
+			}
+		});
+	};
+
+	$scope.logout = function(){
+		$scope.showConfirm("Logout", "Are you sure you want to Logout?");
+	}
 
 }])
 

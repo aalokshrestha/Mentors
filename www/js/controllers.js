@@ -7,6 +7,22 @@ function ($scope, $stateParams) {
 
 
 }])
+
+.controller('details_mentorCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+// You can include any angular dependencies as parameters for this function
+// TIP: Access Route Parameters for your page via $stateParams.parameterName
+function ($scope, $stateParams) {
+
+
+}])
+
+.controller('details_userCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+// You can include any angular dependencies as parameters for this function
+// TIP: Access Route Parameters for your page via $stateParams.parameterName
+function ($scope, $stateParams) {
+
+
+}])
    
 .controller('loginCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
@@ -296,6 +312,10 @@ function ($scope, $stateParams) {
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
 
+	$scope.info = function(){
+		window.location.href = "#/details_mentor";
+	}
+
 	var counter = 0;
 	// console.log("here");
 	$scope.throwoutleft = function(eventName, eventObject){
@@ -391,6 +411,11 @@ function ($scope, $stateParams) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
+
+	$scope.info = function(){
+		window.location.href = "#/details_user";
+	}
+
 	var counter = 0;
 	// console.log("here");
 	$scope.throwoutleft = function(eventName, eventObject){

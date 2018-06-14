@@ -7,6 +7,18 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
+    .state('details_mentor', {
+    url: '/details_mentor',
+    templateUrl: 'templates/details_mentor.html',
+    controller: 'details_mentorCtrl'
+  })
+
+   .state('details_user', {
+    url: '/details_user',
+    templateUrl: 'templates/details_user.html',
+    controller: 'details_userCtrl'
+  })
+
     .state('landing', {
     url: '/page1',
     templateUrl: 'templates/landing.html',
